@@ -41,7 +41,7 @@ Switch.propTypes = {
     rightLabel: PropTypes.string,
     className: PropTypes.string,
     name: PropTypes.string,
-    theme: PropTypes.oneOf(['blue', 'pink']),
+    theme: PropTypes.oneOf(['blue', 'red']),
     disabled: PropTypes.bool,
     checked: PropTypes.bool,
     onChange: PropTypes.func
