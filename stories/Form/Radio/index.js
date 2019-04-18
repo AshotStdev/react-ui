@@ -12,7 +12,7 @@ stories.addDecorator(withKnobs).addDecorator(jsxDecorator);
 
 const themeOptions = {
     blue: 'blue',
-    pink: 'pink',
+    red: 'red',
 };
 
 stories.add('Radio', () => (
