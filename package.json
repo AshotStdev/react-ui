@@ -1,0 +1,43 @@
+{
+  "name": "react-ui",
+  "version": "0.0.1",
+  "description": "A flexible and beautiful UI library for React.js",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
+  "author": "UI Builder",
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "react",
+    "react-component",
+    "ui-component",
+    "sass"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UI-Builder/react-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/UI-Builder/react-ui/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@dump247/storybook-state": "^1.5.2",
+    "@storybook/addon-knobs": "^5.0.6",
+    "@storybook/react": "^5.0.6",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "storybook-addon-jsx": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}

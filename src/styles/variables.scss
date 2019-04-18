@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+$color-disabled: lighten($color-black, 62%);
+$color-border: lighten($color-black, 10%);
+$color-background: #fafafa;
+$color-text: lighten($color-black, 23%);
+$ui-transition-time: .15s;
+
+/*
+  Button variables
+*/
+$ui-button-hover-color: rgba(153, 153, 153, .2);
+$ui-button-hover-color: rgba(153, 153, 153, .2);
+$ui-button-pressed-color: rgba(153, 153, 153, .4);
+$ui-button-min-height: 48px;
+$ui-button-height: 36px;
+$ui-button-padding: ($ui-button-min-height - $ui-button-height) / 2;
+$ui-button-flat-min-width: 88px;
+$ui-button-raised-min-width: 64px;
+$ui-button-floating-action-size: 56px;
+$ui-button-floating-action-size-mini: 40px;
+$ui-button-ripple-transition-time: .3s;

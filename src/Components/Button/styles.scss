@@ -1,0 +1,222 @@
+.ui-button {
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: $ui-button-height;
+  outline: none;
+  overflow: hidden;
+  padding: $ui-button-padding 1em;
+  position: relative;
+  text-transform: uppercase;
+  transition: box-shadow $ui-transition-time, background $ui-transition-time;
+  cursor: pointer;
+
+  &[disabled] {
+    background: $ui-button-hover-color;
+    color: $color-disabled;
+  }
+}
+
+.ui-button-primary,
+.ui-button-secondary,
+.ui-button-info,
+.ui-button-success,
+.ui-button-warning,
+.ui-button-danger {
+  color: $color-white;
+
+  .ripple {
+    background: rgba($color-white, .3);
+  }
+}
+
+.ui-button-default {
+  background: $color-background;
+  color: $color-text;
+
+  &:hover {
+    background: $ui-button-hover-color;
+  }
+
+  &:active {
+    background: $ui-button-pressed-color;
+  }
+
+  &.ui-button-raised {
+    border: 1px solid $color-border;
+  }
+
+  .ripple {
+    background: $ui-button-pressed-color;
+  }
+}
+
+.ui-button-primary:not(.ui-button-flat) {
+  background: $indigo-500;
+
+  &:hover {
+    background: $indigo-400;
+  }
+}
+
+.ui-button-secondary:not(.ui-button-flat) {
+  background: $pink-a200;
+
+  &:hover {
+    background: $pink-a100;
+  }
+}
+
+.ui-button-info:not(.ui-button-flat) {
+  background: $light-blue-a200;
+
+  &:hover {
+    background: $light-blue-a100;
+  }
+}
+
+.ui-button-success:not(.ui-button-flat) {
+  background: $green-500;
+
+  &:hover {
+    background: $green-400;
+  }
+}
+
+.ui-button-warning:not(.ui-button-flat) {
+  background: $orange-a200;
+
+  &:hover {
+    background: $orange-a100;
+  }
+}
+
+.ui-button-danger:not(.ui-button-flat) {
+  background: $red-a200;
+
+  &:hover {
+    background: $red-a100;
+  }
+}
+
+.ui-button-flat {
+  background: transparent;
+  min-width: $ui-button-flat-min-width;
+
+  &.ui-button-primary {
+    color: $indigo-500;
+
+    &:hover {
+      background: $indigo-50;
+    }
+
+    .ripple {
+      background: rgba($indigo-200, .3);
+    }
+  }
+
+  &.ui-button-secondary {
+    color: $pink-a200;
+
+    &:hover {
+      background: $pink-50;
+    }
+
+    .ripple {
+      background: rgba($pink-200, .3);
+    }
+  }
+
+  &.ui-button-info {
+    color: $light-blue-a200;
+
+    &:hover {
+      background: $light-blue-50;
+    }
+
+    .ripple {
+      background: rgba($light-blue-200, .3);
+    }
+  }
+
+  &.ui-button-success {
+    color: $green-500;
+
+    &:hover {
+      background: $green-50;
+    }
+
+    .ripple {
+      background: rgba($green-200, .3);
+    }
+  }
+
+  &.ui-button-warning {
+    color: $orange-a200;
+
+    &:hover {
+      background: $orange-50;
+    }
+
+    .ripple {
+      background: rgba($orange-200, .3);
+    }
+  }
+
+  &.ui-button-danger {
+    color: $red-a200;
+
+    &:hover {
+      background: $red-50;
+    }
+
+    .ripple {
+      background: rgba($red-200, .3);
+    }
+  }
+}
+
+.ui-button-raised {
+  @include ui-box-shadow(1);
+
+  border-radius: 2px;
+  min-width: $ui-button-raised-min-width;
+
+  &:active {
+    @include ui-box-shadow(2);
+  }
+}
+
+.ui-button-floating {
+  @include ui-box-shadow(3);
+
+  border-radius: 50%;
+  height: $ui-button-floating-action-size;
+  width: $ui-button-floating-action-size;
+
+  &.mini {
+    height: $ui-button-floating-action-size-mini;
+    width: $ui-button-floating-action-size-mini;
+  }
+
+  &:active {
+    @include ui-box-shadow(4);
+  }
+}
+
+.ripple {
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  transform: scale(0);
+  transition: transform $ui-button-ripple-transition-time linear,
+  opacity $ui-button-ripple-transition-time linear;
+
+  &.active {
+    transform: scale(1.5);
+  }
+
+  &.leave {
+    opacity: 0;
+  }
+}
