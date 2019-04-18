@@ -1,8 +1,9 @@
 import Button from './Button';
-import Form, { Switch } from './Form';
+import Form, { Switch, Radio } from './Form';
 
 export {
     Button,
     Form,
-    Switch
+    Switch,
+    Radio
 };
