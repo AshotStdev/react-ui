@@ -45,11 +45,11 @@
 }
 
 .ui-radio-blue input:checked ~ .ui-radio-checkmark {
-  border: 2px solid #54ADFF;
+  border: 2px solid $blue-400;
 }
 
-.ui-radio-pink input:checked ~ .ui-radio-checkmark {
-  border: 2px solid #DC0BA5;
+.ui-radio-red input:checked ~ .ui-radio-checkmark {
+  border: 2px solid $red-400;;
 }
 
 .ui-radio-checkmark.checked:after {
@@ -68,9 +68,9 @@
 }
 
 .ui-radio-blue .ui-radio-checkmark:after {
-  background-color: #54ADFF;
+  background-color: $blue-400;
 }
 
-.ui-radio-pink .ui-radio-checkmark:after {
-  background-color: #DC0BA5;
+.ui-radio-red .ui-radio-checkmark:after {
+  background-color: $red-400;
 }
