@@ -1,0 +1,83 @@
+.ui-basic-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+
+    & .ui-modal-background {
+        background-color: black;
+        opacity: .12;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    & .ui-basic-modal-container {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        max-height: 80%;
+        z-index: 10;
+        box-shadow: 8px 12px 32px rgba(0,0,0, .2);
+        background-color: #ffffff;
+        border-radius: 6px;
+        padding: 12px;
+        overflow-y: auto;
+    }
+
+    & .ui-basic-modal-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        z-index: 20;
+
+        & .ui-basic-modal-header {
+            align-self: flex-start;
+            flex: 1;
+
+            & .ui-basic-modal-title {
+                margin-top: 16px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            & .ui-basic-modal-description {
+                margin: 16px 0 16px 0;
+            }
+        }
+
+        & .ui-basic-modal-body {
+            overflow: auto;
+            position: relative;
+
+            & .ui-basic-modal-outer {
+                flex: 1;
+                margin: 16px 0;
+            }
+
+            & .ui-basic-modal-loader {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        & .ui-basic-modal-footer {
+            flex: 1;
+            display: flex;
+            margin-top: 16px;
+            justify-content: flex-end;
+        }
+    }
+}
