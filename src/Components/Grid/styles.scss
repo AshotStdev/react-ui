@@ -1,0 +1,23 @@
+.ui-grid {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+
+  .ui-cell {
+    text-align: center;
+
+    span {
+      display: block;
+      background-color: #ddd;
+      margin: 1px;
+      padding: 10px 15px;
+    }
+  }
+
+  @for $i from 1 to 13 {
+    .ui-cell-#{$i} {
+      width: (100 / 12 * $i) + 0%
+    }
+  }
+}
