@@ -1,8 +1,11 @@
 import Button from './Button';
-import Form, { Switch } from './Form';
+import Form, { Switch, Radio } from './Form';
+import { BasicModal } from './Modals';
 
 export {
     Button,
     Form,
-    Switch
+    Switch,
+    Radio,
+    BasicModal
 };

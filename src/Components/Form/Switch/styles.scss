@@ -31,19 +31,19 @@
       display: none;
 
       &:checked ~ .ui-switch-slider-blue {
-        background-color: #B7DAF6;
+        background-color: $blue-100;
       }
 
-      &:checked ~ .ui-switch-slider-pink {
-        background-color: #fbc2eb;
+      &:checked ~ .ui-switch-slider-red {
+        background-color: $red-100;
       }
 
       &:focus ~ .ui-switch-slider-blue {
-        box-shadow: 0 0 1px #2196F3;
+        box-shadow: 0 0 1px $blue-500;
       }
 
-      &:focus ~ .ui-switch-slider-pink {
-        box-shadow: 0 0 1px #DC0BA5;
+      &:focus ~ .ui-switch-slider-red {
+        box-shadow: 0 0 1px $red-500;
       }
 
       &:checked ~ .ui-switch-slider:before {
@@ -52,12 +52,12 @@
       }
 
       &:checked ~ .ui-switch-slider-blue:before {
-        background-color: #54adff;
+        background-color: $blue-400;
         box-shadow: 0 1px 2px 0 rgba(48, 79, 254, 0.48);
       }
 
-      &:checked ~ .ui-switch-slider-pink:before {
-        background-color: #DC0BA5;
+      &:checked ~ .ui-switch-slider-red:before {
+        background-color: $red-400;
         box-shadow: 0 1px 2px 0 rgba(220, 11, 165, 0.48);
       }
 

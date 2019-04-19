@@ -1,0 +1,76 @@
+.ui-radio {
+  display: block;
+  position: relative;
+  padding: 3px 0 0 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:disabled ~ .ui-radio-checkmark {
+      border: 2px solid #DADADA;
+      cursor: not-allowed;
+    }
+  }
+
+  .ui-radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #9e9e9e;
+
+    &:after {
+      top: 5px;
+      left: 5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+
+  .ui-radio-disabled-label {
+    color: $color-disabled;
+  }
+}
+
+.ui-radio-blue input:checked ~ .ui-radio-checkmark {
+  border: 2px solid $blue-400;
+}
+
+.ui-radio-red input:checked ~ .ui-radio-checkmark {
+  border: 2px solid $red-400;;
+}
+
+.ui-radio-checkmark.checked:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.ui-radio input:checked ~ .ui-radio-checkmark:after {
+  display: block;
+}
+
+.ui-radio input:disabled ~ .ui-radio-checkmark:after {
+  display: block;
+  background-color: #DADADA;
+}
+
+.ui-radio-blue .ui-radio-checkmark:after {
+  background-color: $blue-400;
+}
+
+.ui-radio-red .ui-radio-checkmark:after {
+  background-color: $red-400;
+}
