@@ -1,6 +1,7 @@
 import '../src/styles/index.scss';
 
 import Button from './Button';
+import Avatar from './Avatar';
 import Icons from './Icons';
 import Switch from './Form/Switch';
 import Radio from './Form/Radio';
