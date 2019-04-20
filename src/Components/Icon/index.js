@@ -10,12 +10,12 @@ const defaultStyles = {
     width: '1em'
 };
 
-function Svg({type, className, color, size, styles, viewBox, ...rest}) {
+function Icon({type, className, color, size, styles, viewBox, ...rest}) {
     const vb = viewBox || '0 0 24 24';
 
     return (
         ICONS[type] ?
-        <svg
+        <Icon
             className={className}
             focusable="false"
             style={{
@@ -28,11 +28,11 @@ function Svg({type, className, color, size, styles, viewBox, ...rest}) {
             {...rest}
         >
             <path d={ICONS[type]}/>
-        </svg> : <span>Not found</span>
+        </Icon> : <span>Not found</span>
     );
 }
 
-Svg.propTypes = {
+Icon.propTypes = {
     type: PropTypes.string,
     color: PropTypes.string,
     className: PropTypes.string,
@@ -41,10 +41,10 @@ Svg.propTypes = {
     viewBox: PropTypes.string
 };
 
-Svg.defaultProps = {
+Icon.defaultProps = {
     type: 'react',
     color: 'inherit',
     size: 24
 };
 
-export default Svg;
+export default Icon;
