@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-class BasicModal extends Component {
+class Modal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -100,11 +100,11 @@ class BasicModal extends Component {
     }
 }
 
-BasicModal.defaultProps = {
+Modal.defaultProps = {
     className: ''
 };
 
-BasicModal.propTypes = {
+Modal.propTypes = {
     className: PropTypes.string,
     open: PropTypes.bool,
     onClose: PropTypes.func,
@@ -115,4 +115,4 @@ BasicModal.propTypes = {
     width: PropTypes.string
 };
 
-export default BasicModal;
+export default Modal;

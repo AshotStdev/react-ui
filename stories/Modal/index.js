@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import { Button, BasicModal } from '../../../src/Components';
+import { Button, Modal } from '../../src/Components';
 
-const stories = storiesOf('Components/Modals', module);
+const stories = storiesOf('Components', module);
 
 stories.addDecorator(withKnobs).addDecorator(jsxDecorator);
 
-stories.add('Basic', () => (
+stories.add('Modal', () => (
     <div>
-        <BasicModal
+        <Modal
             open={boolean('open', true)}
             title={text('title', 'Lorem Ipsum')}
             description={text('description', 'What is Lorem Ipsum?')}
@@ -42,6 +42,6 @@ stories.add('Basic', () => (
                 and more recently with desktop publishing software like Aldus PageMaker including
                 versions of Lorem Ipsum.
             </div>
-        </BasicModal>
+        </Modal>
     </div>
 ));
