@@ -2,9 +2,10 @@ import Button from './Button';
 import Avatar from './Avatar';
 import Icon from './Icon';
 import Chip from './Chip';
+import Badge from './Badge';
 import Form, { Switch, Radio } from './Form';
 import { Grid, Cell } from './Grid';
-import { BasicModal } from './Modals';
+import Modal from './Modal';
 import Ripple from './Ripple';
 
 export {
@@ -12,11 +13,12 @@ export {
     Avatar,
     Icon,
     Chip,
+    Badge,
     Form,
     Switch,
     Radio,
     Grid,
     Cell,
-    BasicModal,
+    Modal,
     Ripple
 };
