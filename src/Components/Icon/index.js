@@ -15,7 +15,7 @@ function Icon({type, className, color, size, styles, viewBox, ...rest}) {
 
     return (
         ICONS[type] ?
-        <Icon
+        <svg
             className={className}
             focusable="false"
             style={{
@@ -28,7 +28,7 @@ function Icon({type, className, color, size, styles, viewBox, ...rest}) {
             {...rest}
         >
             <path d={ICONS[type]}/>
-        </Icon> : <span>Not found</span>
+        </svg> : <span>Not found</span>
     );
 }
 

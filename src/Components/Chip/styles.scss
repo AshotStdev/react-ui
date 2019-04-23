@@ -1,0 +1,39 @@
+.chip {
+  background-color: $grey-200;
+  border-radius: 32px;
+  color: $color-black;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 32px;
+  margin-right: 3px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.avatar {
+    padding-left: 0;
+
+    & > [data-react-ui='avatar'] {
+      height: 32px;
+      margin-right: 8px;
+      vertical-align: middle;
+      width: 32px;
+    }
+  }
+
+  &.deletable {
+    padding-right: 32px;
+
+    & > .ui-chip-delete {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+    }
+  }
+}
