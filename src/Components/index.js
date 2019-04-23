@@ -1,6 +1,7 @@
 import Button from './Button';
 import Avatar from './Avatar';
 import Icon from './Icon';
+import Chip from './Chip';
 import Form, { Switch, Radio } from './Form';
 import { Grid, Cell } from './Grid';
 import { BasicModal } from './Modals';
@@ -10,6 +11,7 @@ export {
     Button,
     Avatar,
     Icon,
+    Chip,
     Form,
     Switch,
     Radio,

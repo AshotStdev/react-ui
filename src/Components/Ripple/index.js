@@ -176,7 +176,7 @@ const rippleWrapper = (options = {}) => {
                 }, className);
 
                 return (
-                    <span key={key} data-react-toolbox="ripple" className="rippleWrapper" {...props}>
+                    <span key={key} data-react-ui="ripple" className="rippleWrapper" {...props}>
                         <span
                             className={classNames}
                             ref={(node) => {
