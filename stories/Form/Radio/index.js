@@ -1,4 +1,4 @@
-import { Radio, Switch } from '../../../src/Components';
+import { Radio } from '../../../src/Components';
 
 import React from 'react';
 

@@ -1,0 +1,182 @@
+.ui-input {
+  padding: 20px 0;
+  position: relative;
+  width: 300px;
+
+  .icon {
+    display: block;
+    left: -40px;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .counter {
+    color: rgba($grey-900, .26);
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .error {
+    color: rgb(222, 50, 38);
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: -20px;
+  }
+
+  .ui-placeholder {
+    color: rgba($grey-900, .26);
+    font-size: 16px;
+    left: 0;
+    line-height: 16px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 32px;
+    transition-duration: 0.35s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .label {
+    color: rgba($grey-900, .26);
+    font-size: 16px;
+    left: 0;
+    line-height: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: 32px;
+    transition-duration: 0.35s;
+    transition-property: top, font-size, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.fixed ~ .ui-placeholder {
+      display: none;
+    }
+  }
+
+  .bar {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+      background-color: $indigo-500;
+      bottom: 0;
+      content: '';
+      height: 2px;
+      position: absolute;
+      transition-duration: 0.2s;
+      transition-property: width, background-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0;
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      right: 50%;
+    }
+  }
+
+  &.withIcon {
+    margin-left: 50px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &.hasError {
+    padding-bottom: 0;
+
+    & > .ui-input-element {
+      border-bottom-color: rgb(222, 50, 38);
+      margin-top: 1px;
+    }
+
+    & > .counter,
+    & > .label {
+      color: rgb(222, 50, 38);
+    }
+
+    & > .label > .required {
+      color: rgb(222, 50, 38);
+    }
+  }
+
+  &.disabled > .ui-input-element {
+    border-bottom-style: dashed;
+    color: rgba($grey-900, .26);
+  }
+
+  .ui-input-element {
+    background-color: transparent;
+    border-bottom: 1px solid rgba($grey-900, .12);
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0;
+    color: $grey-900;
+    display: block;
+    font-size: 16px;
+    outline: none;
+    padding: 8px 0;
+    min-width: 100%;
+    max-width: 100%;
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &.filled ~ .ui-placeholder,
+    &.filled ~ .label.fixed {
+      display: none;
+    }
+
+    &.filled,
+    &[type='date'],
+    &[type='time'],
+    &:focus:not([disabled]):not([readonly]) {
+      & ~ .label:not(.fixed) {
+        font-size: 12px;
+        top: 6px;
+      }
+    }
+
+    &:focus:not([disabled]):not([readonly]) {
+      & ~ .bar::before,
+      & ~ .bar::after {
+        width: 50%;
+      }
+
+      & ~ .label:not(.fixed) {
+        color: $indigo-500;
+      }
+
+      & ~ .label > .required {
+        color: rgb(222, 50, 38);
+      }
+
+      & ~ .ui-placeholder {
+        display: block;
+        opacity: 1;
+      }
+
+      & ~ .icon {
+        color: $indigo-500;
+      }
+
+      &.filled ~ .ui-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

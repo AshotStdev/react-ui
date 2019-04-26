@@ -28,7 +28,7 @@ function Icon({type, className, color, size, styles, viewBox, ...rest}) {
             {...rest}
         >
             <path d={ICONS[type]}/>
-        </svg> : <span>Not found</span>
+        </svg> : <span>404</span>
     );
 }
 
