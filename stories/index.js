@@ -7,6 +7,7 @@ import Chip from './Chip';
 import Badge from './Badge';
 import Switch from './Form/Switch';
 import Radio from './Form/Radio';
+import Input from './Form/Input';
 import Grid from './Grid';
 import Modal from './Modal';
 import Ripple from './Ripple';
